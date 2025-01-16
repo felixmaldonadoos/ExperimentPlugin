@@ -371,8 +371,8 @@ void AExperimentClient::UpdatePredator(const FMessage& InMessage) {
 	if (PredatorBasic->IsValidLowLevelFast()) {
 		// ReSharper disable once CppUseStructuredBinding
 		const FStep StepOut = UExperimentUtils::JsonStringToStep(InMessage.body);
-		FVector NewLocation = UExperimentUtils::CanonicalToVr(StepOut.location, MapLength, WorldScale)
-			+ FVector(3.0f,117.0f,0.0f);
+		FVector NewLocation = UExperimentUtils::CanonicalToVr(StepOut.location, MapLength, WorldScale);
+			// + FVector(3.0f,117.0f,0.0f);
 
 		NewLocation.Z = 182.0f * 2; // 6ft
 
